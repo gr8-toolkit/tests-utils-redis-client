@@ -1,0 +1,34 @@
+{
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information"
+    }
+  },
+  "RedisSettings": {
+    "DefaultSettings": {
+      "WaiterSettings": {
+        "RetryCount": 10
+      }
+    },
+    "RedisClients": {
+      "local": {
+        "ConnectionString": "localhost:6379,allowAdmin=true,abortConnect=false",
+        "WaiterSettings": {
+          "RetryCount": 10,
+          "Interval": "00:00:01"
+        }
+      },
+      "stage": {
+        "ConnectionString": "localhost:6379,allowAdmin=true,abortConnect=false"
+      },
+      "serializer-test": {
+        "ConnectionString": "localhost:6379,allowAdmin=true,abortConnect=false",
+        "SerializerTypeString": "Tests.Tests.RedisTests+CustomSerializerFromSettings, Tests"
+      },
+      "deserializer-test": {
+        "ConnectionString": "localhost:6379,allowAdmin=true,abortConnect=false",
+        "DeserializerTypeString": "Tests.Tests.RedisTests+CustomDeserializerFromSettings, Tests"
+      }
+    }
+  }
+}

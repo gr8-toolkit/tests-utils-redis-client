@@ -1,0 +1,23 @@
+{
+  "RedisSettings": {
+    "DefaultSettings": {
+      "WaiterSettings": {
+        "RetryCount": 25
+      },
+      "SerializerTypeString": "Test.CustomSerializer, Test"
+    },
+    "RedisClients": {
+      "local": {
+        "ConnectionString": "localhost:6379,allowAdmin=true,abortConnect=false",
+        "SerializerTypeString": "Test.CustomSerializer, TestNew",
+        "WaiterSettings": {
+          "RetryCount": 15,
+          "Interval": "00:00:02"
+        }
+      },
+      "stage": {
+        "ConnectionString": "localhost:6379,allowAdmin=true,abortConnect=false"
+      }
+    }
+  }
+}
