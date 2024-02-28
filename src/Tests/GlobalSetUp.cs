@@ -8,7 +8,7 @@ using Tests.SetUpFixtures;
 namespace Tests;
  
 [SetUpFixture]
-public static class GlobalSetUp
+public static class GlobalSetUp 
 {
     private static ILogger _logger = SerilogDecorator.Logger.ForContextStaticClass(typeof(GlobalSetUp));
     private static DockerFixture? DockerFixture { get; set; }
